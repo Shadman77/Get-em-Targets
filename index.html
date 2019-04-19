@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Boostrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!--Font Awesome-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<!--Custom CSS-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>Get 'em Targets</title>
+</head>
+<body style="padding: 0px; margin: 0px;">
+	
+	<!--Homepage-->
+	<div id="homePage" class="homePage">
+		<h1 class="homePageTitle">
+			Get 'em Targets
+		</h1>
+		<div class="homePagebuttonContainer">
+			<button type="button" class="btn btn-danger homePageButton" onclick="homeToPlayMenu()">Play</button>
+			<button type="button" class="btn btn-warning homePageButton" onclick="homeToHighScores()">Highest Scores</button>
+			<button type="button" class="btn btn-primary homePageButton" onclick="homeToAbout()">About</button>
+		</div>
+	</div>
+
+	<!--Play Menu-->
+	<div id="playMenu" class="playMenu">
+		<div>
+			<h4 id="difficultyLabel">Difficulty : Easy</h4>
+			<button type="button" class="btn btn-success" onclick="setLeveL(1)">Easy</button>
+			<button type="button" class="btn btn-warning" onclick="setLeveL(2)">Medium</button>
+			<button type="button" class="btn btn-danger" onclick="setLeveL(3)">Hard</button>
+		</div>
+		<button type="button" class="btn btn-primary" style="margin-top: 30px;" onclick="playMenuToGame()">Start Game</button>
+		<button type="button" class="btn btn-danger" style="position: absolute; left: 20px;
+		bottom: 20px;" onclick="playMenuToHome()"><i class="fas fa-sign-out-alt"></i> Back</button>
+	</div>
+
+	<!--High Scores-->
+	<div id="highScorePage" class="bg-warning">
+		<div id="highScoreInnerDiv" style="margin-top: 20px;">
+			
+		</div>
+		<button type="button" class="btn btn-danger" style="position: absolute; left: 20px;
+		bottom: 20px;" onclick="highScoreToHome()"><i class="fas fa-sign-out-alt"></i> Back</button>
+	</div>
+
+	<!--About Page-->
+	<div id="aboutPage" class="bg-primary">
+		<p>
+			Instruction: The game contains three levels. In each level there will be varying number of targets and the targets will reset their position randomly at set intervals. Hitting any target will also reset the position for all the targets and the player will recieve a score of 10 for Easy, 20 for Medium and 30 for Hard. The targets will reset 100 times. So a player can at most hit a 100 targets.
+
+			Moving the mouse moves the targets and the left mouse button is for shooting.
+		</p>
+		<p id="credits" style="position: absolute; bottom: 20px; right: 20px; display: inline-block;">
+			Developed by: Shadman Saif Anonno (16202007)
+		</p>
+		<button type="button" class="btn btn-danger" style="position: absolute; left: 20px;
+		bottom: 20px;" onclick="aboutToHome()"><i class="fas fa-sign-out-alt"></i> Back</button>
+	</div>
+
+	<!--The Actual Game-->
+	<div>
+		<canvas id="canvas" width="100vw" height="100vh">
+
+		</canvas>
+		<div id="scoreBoard">
+			<div class="row">
+				<div class="col-sm-3" style="text-align: left;">
+					<button type="button" class="btn btn-danger" onclick="gameToPlayMenu()" style="margin-left: 20px;"><i class="fas fa-sign-out-alt"></i> Back</button>
+				</div>
+				<div class="col-sm-3">
+					<p id="highScore" class="btn btn-light" style="margin-bottom: 0px;">Highest Score : 0</p>
+				</div>
+				<div class="col-sm-3">
+					<p id="targets" class="btn btn-light" style="margin-bottom: 0px;">Targets : 1/100</p>
+				</div>
+				<div class="col-sm-3">
+					<p id="score" class="btn btn-light" style="margin-bottom: 0px;">Score : 0</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Final Score-->
+	<div id="finalScore">
+		<p id="finalScoreParagraph"></p>
+		<button type="button" class="btn btn-danger" style="position: absolute; left: 20px;
+		bottom: 20px;" onclick="finalScoreToPlayMenu()"><i class="fas fa-sign-out-alt"></i> Back</button>
+	</div>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="menu.js"></script>
+</body>
+</html>

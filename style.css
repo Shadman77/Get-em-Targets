@@ -1,0 +1,90 @@
+html, body{
+	overflow: hidden;
+}
+/*HomePage*/
+.homePage{
+	background: black;
+	width: 100vw;
+	height: 100vh;
+}
+.homePageTitle{
+	margin: 0px;
+	padding: 0px;
+	border-bottom: solid 2px white;
+	text-align: center;
+	color: white;
+	height: 60px;
+}
+.homePagebuttonContainer{
+	display: table-cell;
+	width: 100vw;
+	height: calc(100vh - 60px);
+	vertical-align: middle;
+}
+.homePageButton{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 250px;
+	display: block;
+	font-size: 150%;
+}
+/*Play Menu*/
+.playMenu{
+	/*display: table-cell;*/
+	display: none;
+	background: black;
+	width: 100vw;
+	height: 100vh;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+}
+/*Canvas*/
+#canvas{
+	cursor: none;
+	display: none;
+}
+#scoreBoard{
+	background-color: black;
+	text-align: center;
+	font-size: 110%;
+	color: white;
+	height: auto;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	display: none;
+	width: 100vw;
+}
+/*High Score*/
+#highScorePage{
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	overflow-y: scroll;
+	display: none;
+	color: white;
+	font-size: 150%;
+}
+/*About Page*/
+#aboutPage{
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	color: white;
+	overflow-y: scroll;
+	padding: 10px;
+	text-align: center;
+}
+/*Page for final score*/
+#finalScore{
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	display: none;
+	vertical-align: middle;
+	text-align: center;
+	color: #ffff00;
+	font-size: 200%;
+}
